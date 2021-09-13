@@ -16,7 +16,7 @@ struct ContactView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .bottom) {
                 LinearGradient(colors: [Color.blue.opacity(0.33), Color.blue.opacity(0.1), Color.mint.opacity(0.2)], startPoint: .topLeading, endPoint: .bottomTrailing)
                 
                 ScrollView(.vertical, showsIndicators: false) {
@@ -126,6 +126,25 @@ struct ContactView: View {
                     }
                 }
                 .offset(y: 100)
+                
+                Menu("Contact".uppercased()) {
+                    Button("Call", action: { })
+                    Button("Email", action: { })
+                    Button("Facetime", action: { })
+                    Button("Text", action: { })
+                }
+                .font(.headline)
+                .padding()
+                .foregroundStyle(
+                    .linearGradient(colors: [.cyan, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
+                )
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .frame(width: 120, height: 60)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .offset(x: 130, y: -30)
+                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2, y: 2)
+                
             }
             .edgesIgnoringSafeArea(.all)
         }
@@ -174,15 +193,13 @@ struct HeaderView: View {
                 
                 VStack(alignment: .leading, spacing: 6) {
                     Label("\(contact.phoneNumber)", systemImage: "phone.fill")
-                        .font(.system(size: 14, weight: .light, design: .rounded))
                         .foregroundColor(Color.black.opacity(0.5))
                     Label("\(contact.email)", systemImage: "envelope.fill")
-                        .font(.system(size: 14, weight: .light, design: .rounded))
                         .foregroundColor(Color.black.opacity(0.5))
                     Label("\(contact.address)", systemImage: "mappin.and.ellipse")
-                        .font(.system(size: 14, weight: .light, design: .rounded))
                         .foregroundColor(Color.black.opacity(0.5))
                 }
+                .font(.caption)
             }
         }
     }

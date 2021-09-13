@@ -31,11 +31,15 @@ struct ContactsList: View {
                                     ZStack(alignment: .center) {
                                         Circle()
                                             .frame(width: 20, height: 20)
-                                            .foregroundColor(.white)
+                                            .foregroundStyle(
+                                                .linearGradient(colors: [.yellow, .red.opacity(0.70)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                            )
                                             .shadow(color: Color.black.opacity(0.3), radius: 3, x: 1, y: 2)
                                         
                                         Text("\(contact.rank)")
                                             .bold()
+                                            .foregroundColor(.white)
+                                            
                                     }
                                     .offset(x: 25, y: 25)
                                 }
@@ -53,11 +57,16 @@ struct ContactsList: View {
                     Button("Rank", action: { sortByRank() })
                     Button("Recent", action: { sortByRecent() })
                 }
+                .frame(width: 70, height: 16)
                 .padding()
                 .foregroundStyle(
-                    .linearGradient(colors: [.cyan, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .linearGradient(colors: [.purple, .red], startPoint: .topLeading, endPoint: .bottomTrailing)
                 )
                 .font(.headline)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .offset(x: -20)
+                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2, y: 2)
             }
         }
     }
