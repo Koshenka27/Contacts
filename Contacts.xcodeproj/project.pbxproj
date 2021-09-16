@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B346E72226F34F8D004AC27E /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346E72126F34F8D004AC27E /* Wave.swift */; };
+		B346E72426F34FCC004AC27E /* Wave1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346E72326F34FCC004AC27E /* Wave1.swift */; };
+		B346E72626F34FF3004AC27E /* BackgroundShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346E72526F34FF3004AC27E /* BackgroundShapes.swift */; };
 		B355742626EA1BA700AE2A9B /* ContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355742526EA1BA700AE2A9B /* ContactsApp.swift */; };
 		B355742826EA1BA700AE2A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355742726EA1BA700AE2A9B /* ContentView.swift */; };
 		B355742A26EA1BA700AE2A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B355742926EA1BA700AE2A9B /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B346E72126F34F8D004AC27E /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		B346E72326F34FCC004AC27E /* Wave1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave1.swift; sourceTree = "<group>"; };
+		B346E72526F34FF3004AC27E /* BackgroundShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundShapes.swift; sourceTree = "<group>"; };
 		B355742226EA1BA700AE2A9B /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B355742526EA1BA700AE2A9B /* ContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsApp.swift; sourceTree = "<group>"; };
 		B355742726EA1BA700AE2A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				B355743326EBB40000AE2A9B /* ContactView.swift */,
 				B355743726EBB64800AE2A9B /* Contact.swift */,
 				B355743526EBB40D00AE2A9B /* ContactsList.swift */,
+				B346E72126F34F8D004AC27E /* Wave.swift */,
+				B346E72326F34FCC004AC27E /* Wave1.swift */,
+				B346E72526F34FF3004AC27E /* BackgroundShapes.swift */,
 				B355742926EA1BA700AE2A9B /* Assets.xcassets */,
 				B355742B26EA1BA700AE2A9B /* Preview Content */,
 			);
@@ -146,10 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B346E72226F34F8D004AC27E /* Wave.swift in Sources */,
 				B355743626EBB40D00AE2A9B /* ContactsList.swift in Sources */,
 				B355742826EA1BA700AE2A9B /* ContentView.swift in Sources */,
 				B355743826EBB64800AE2A9B /* Contact.swift in Sources */,
 				B355743426EBB40000AE2A9B /* ContactView.swift in Sources */,
+				B346E72626F34FF3004AC27E /* BackgroundShapes.swift in Sources */,
+				B346E72426F34FCC004AC27E /* Wave1.swift in Sources */,
 				B355742626EA1BA700AE2A9B /* ContactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

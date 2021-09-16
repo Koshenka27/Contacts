@@ -17,7 +17,7 @@ struct ContactView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
-                LinearGradient(colors: [Color.blue.opacity(0.33), Color.blue.opacity(0.1), Color.mint.opacity(0.2)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                BackgroundShapes()
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -30,12 +30,13 @@ struct ContactView: View {
                             Text(contact.awayMessage)
                                 .font(.system(size: 16, weight: .medium, design: .rounded))
                                 .foregroundStyle(
-                                    .linearGradient(colors: [.red, .purple], startPoint: .top, endPoint: .bottomTrailing)
+                                    .linearGradient(colors: [Color(#colorLiteral(red: 0.050347208976745605, green: 0.14063718914985657, blue: 0.4166666567325592, alpha: 1)), .black.opacity(0.8)], startPoint: .top, endPoint: .bottomTrailing)
                                 )
                         }
                         .padding()
+                        .frame(width: 380)
                         .background(
-                            .regularMaterial,
+                            .ultraThinMaterial,
                             in: RoundedRectangle(cornerRadius: 20)
                         )
                         .padding()
@@ -65,9 +66,9 @@ struct ContactView: View {
                         .padding(16)
                         .frame(width: 380)
                         .foregroundStyle(
-                            .linearGradient(colors: [.cyan, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .linearGradient(colors: [.blue, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
                         )
-                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Communication".uppercased())
@@ -114,7 +115,7 @@ struct ContactView: View {
                         }
                         .frame(width: 380)
                         .foregroundColor(Color.black.opacity(0.8))
-                        .background(.regularMaterial, in:
+                        .background(.ultraThinMaterial, in:
                                         RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .padding()
                         
@@ -190,16 +191,18 @@ struct HeaderView: View {
                 
                 Text("\(contact.name)")
                     .font(.system(size: 28, weight: .medium, design: .rounded))
+                    .foregroundColor(Color.white.opacity(0.8))
                 
                 VStack(alignment: .leading, spacing: 6) {
                     Label("\(contact.phoneNumber)", systemImage: "phone.fill")
-                        .foregroundColor(Color.black.opacity(0.5))
+                        .foregroundColor(Color.white.opacity(0.8))
                     Label("\(contact.email)", systemImage: "envelope.fill")
-                        .foregroundColor(Color.black.opacity(0.5))
+                        .foregroundColor(Color.white.opacity(0.8))
                     Label("\(contact.address)", systemImage: "mappin.and.ellipse")
-                        .foregroundColor(Color.black.opacity(0.5))
+                        .foregroundColor(Color.white.opacity(0.8))
                 }
                 .font(.caption)
+                .foregroundColor(.white)
             }
         }
     }
