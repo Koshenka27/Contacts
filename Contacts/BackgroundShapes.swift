@@ -37,7 +37,7 @@ struct BackgroundShapes: View {
                         startPoint: UnitPoint(x: 0.5587045027799772, y: 0.17885617923059305),
                         endPoint: UnitPoint(x: 0.4878167129160812, y: 0.6770096058916008)))
                 .frame(width: 2054, height: 1131, alignment: .center)
-                .offset(x: -20, y: 210)
+                .offset(x: -20, y: 300)
             
 //            GlobeShape()
 //                .fill(RadialGradient(
@@ -74,9 +74,9 @@ struct BackgroundShapes: View {
                 ))
                 .cornerRadius(30)
                 .opacity(0.5)
-                .frame(width: 300, height: 300)
-                .offset(x: 140, y: -200)
-                .rotationEffect(.degrees(90))
+                .frame(width: 350, height: 350)
+                .offset(x: 230, y: -100)
+                .rotationEffect(.degrees(20))
                 .blur(radius: 7)
             
 //            Circle()

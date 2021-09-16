@@ -44,7 +44,10 @@ struct ContactsList: View {
                                     .offset(x: 25, y: 25)
                                 }
                                 Text(contact.name)
-                                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                                    .foregroundStyle(
+                                        .linearGradient(colors: [Color(#colorLiteral(red: 0.050347208976745605, green: 0.14063718914985657, blue: 0.4166666567325592, alpha: 1)), Color.black.opacity(0.75)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    )
                             }
                         }
                     }
