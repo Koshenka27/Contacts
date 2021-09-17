@@ -70,14 +70,14 @@ struct ContactView: View {
                         )
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                         
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: 2) {
                             Text("Communication".uppercased())
                                 .font(.headline)
                                 .padding()
                             HStack(alignment: .top) {
                                 Text(contact.mostRecentText)
                                     .font(.caption)
-                                    .frame(width: 260, height: 31)
+                                    .frame(width: 250, height: 31)
                                 Spacer()
                                 Text("yesterday")
                                     .font(.caption)
@@ -190,7 +190,7 @@ struct HeaderView: View {
             VStack(alignment: .leading, spacing: 16) {
                 
                 Text("\(contact.name)")
-                    .font(.system(size: 28, weight: .medium, design: .rounded))
+                    .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.white.opacity(0.8))
                 
                 VStack(alignment: .leading, spacing: 6) {
