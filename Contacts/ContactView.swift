@@ -125,26 +125,26 @@ struct ContactView: View {
                         .frame(width: 380, height: 200)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     }
+                    
+                    Menu("Contact".uppercased()) {
+                        Button("Call", action: { })
+                        Button("Email", action: { })
+                        Button("Facetime", action: { })
+                        Button("Text", action: { })
+                    }
+                    .font(.headline)
+                    .padding()
+                    .foregroundStyle(
+                        .linearGradient(colors: [.cyan, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .frame(width: 120, height: 60)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .offset(x: 130)
+                    .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2, y: 2)
                 }
                 .offset(y: 100)
-                
-                Menu("Contact".uppercased()) {
-                    Button("Call", action: { })
-                    Button("Email", action: { })
-                    Button("Facetime", action: { })
-                    Button("Text", action: { })
-                }
-                .font(.headline)
-                .padding()
-                .foregroundStyle(
-                    .linearGradient(colors: [.cyan, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                .frame(width: 120, height: 60)
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                .offset(x: 130, y: -30)
-                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2, y: 2)
                 
             }
             .edgesIgnoringSafeArea(.all)
