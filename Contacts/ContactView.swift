@@ -188,7 +188,6 @@ struct HeaderView: View {
                 )
             
             VStack(alignment: .leading, spacing: 16) {
-                
                 Text("\(contact.name)")
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.white.opacity(0.8))

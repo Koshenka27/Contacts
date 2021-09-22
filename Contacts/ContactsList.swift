@@ -32,7 +32,7 @@ struct ContactsList: View {
                                         Circle()
                                             .frame(width: 20, height: 20)
                                             .foregroundStyle(
-                                                .linearGradient(colors: [.yellow, .red.opacity(0.70)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                                .linearGradient(colors: [.purple, .red], startPoint: .topLeading, endPoint: .bottomTrailing)
                                             )
                                             .shadow(color: Color.black.opacity(0.3), radius: 3, x: 1, y: 2)
                                         
@@ -45,9 +45,6 @@ struct ContactsList: View {
                                 }
                                 Text(contact.name)
                                     .font(.system(size: 20, weight: .medium, design: .rounded))
-                                    .foregroundStyle(
-                                        .linearGradient(colors: [Color(#colorLiteral(red: 0.050347208976745605, green: 0.14063718914985657, blue: 0.4166666567325592, alpha: 1)), Color.black.opacity(0.75)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                    )
                             }
                         }
                     }
